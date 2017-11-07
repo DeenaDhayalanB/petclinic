@@ -2,7 +2,7 @@ resources:
   - name: git-repo
     type: git
     source:
-      uri: https://github.com/DeenaDhayalanB/springpetclinic.git
+      uri: https://github.com/DeenaDhayalanB/petclinic.git
       branch: master
 
 jobs:

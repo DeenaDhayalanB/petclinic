@@ -2,15 +2,34 @@ resources:
   - name: git-repo
     type: git
     source:
-      uri: https://github.com/DeenaDhayalanB/petclinic.git
+      uri: https://github.com/DeenaDhayalanB/springpetclinic.git
       branch: master
 
 jobs:
-  - name: maven-package
+  - name: package
     plan:
     - aggregate:
       - get: git-repo
         trigger: true
-    - task: maven-package
+    - task: package
       privileged: true
-      file: git-repo/package.yml
+      file: git-repo/mvnpackage.yml
+
+  - name: sonar
+    plan:
+    - aggregate:
+      - get: git-repo
+        trigger: true
+    - task: sonar
+      privileged: true
+      file: git-repo/mvnsonar.yml
+
+  - name: nexus
+    plan:
+    - aggregate:
+      - get: git-repo
+        trigger: true
+    - task: nexus
+      privileged: true
+      file: git-repo/mvnnexus.yml
+

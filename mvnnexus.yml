@@ -7,9 +7,9 @@ image_resource:
     tag: latest
 
 inputs:
-  - name: git-repo
+  - name: package-output
 outputs:
-  - name: mvn-package-output
+  - name: nexus-output
 
 run:
   path: "mvn"

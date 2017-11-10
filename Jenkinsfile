@@ -6,7 +6,7 @@ pipeline {
       steps {
         echo 'Build started!'
         checkout scm
-        sh 'mvn clean package -DskipTests=true'
+        sh 'mvn clean install -DskipTests=True'
       }
     }
     stage('Test') {

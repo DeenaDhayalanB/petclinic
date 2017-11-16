@@ -7,7 +7,7 @@ image_resource:
     tag: latest
 
 inputs:
-  - name: mvn-sonar
+  - name: git-repo
 outputs:
   - name: mvn-nexus
 

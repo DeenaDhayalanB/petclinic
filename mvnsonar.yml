@@ -10,7 +10,7 @@ inputs:
   - name: git-repo
   - name: mvn-package
 outputs:
-  - name: mvn-package-output
+  - name: mvn-package-op
 
 run:
   path: "ls"

@@ -15,7 +15,3 @@ outputs:
 run:
   path: "ls"
   args: ['-alR']
-
-run:
-  path: "mvn"
-  args: ["-f", "git-repo/pom.xml", "-Dsonar.host.url=http://54.209.104.148:9001/", "sonar:sonar"]

@@ -8,8 +8,13 @@ image_resource:
 
 inputs:
   - name: git-repo
+  - name: mvn-package
 outputs:
   - name: mvn-package-output
+
+run:
+  path: "ls"
+  args: ['-alR']
 
 run:
   path: "mvn"

@@ -8,10 +8,10 @@ image_resource:
 
 inputs:
   - name: git-repo
-  - name: mvn-package
+
 outputs:
-  - name: mvn-package-out
+  - name: mvn-package-op
 
 run:
-  path: "ls"
-  args: ['-alR']
+  path: "mvn"
+  args: ["-f", "git-repo/pom.xml", "-Dsonar.host.url=http://54.209.104.148:9001/", "sonar:sonar"]

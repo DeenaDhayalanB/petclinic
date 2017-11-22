@@ -3,13 +3,10 @@
 set -e # fail fast
 set -x # print commands
 
-git clone resource-gist updated-gist
+git clone resource-tutorial updated-gist
 
 cd updated-gist
-echo $(date) > bumpme
-
-git config --global user.email "nobody@concourse.ci"
-git config --global user.name "Concourse"
+mvn clean package
 
 git add .
-git commit -m "Bumped date"
+git commit -m "packaged output"

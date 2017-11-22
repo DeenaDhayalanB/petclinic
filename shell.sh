@@ -3,9 +3,13 @@
 set -e # fail fast
 set -x # print commands
 
-git clone resource-tutorial updated-gist
+git clone resource-tutorial source
+git clone resource-gist dest
 
-cd updated-gist
+sudo rm -rf dest/*
+sudo cp -r source/* dest/
+
+cd dest
 mvn clean package
 
 git config --global user.email "DeenaDhayalan.B@cognizant.com"

@@ -6,8 +6,8 @@ set -x # print commands
 git clone resource-tutorial source
 git clone resource-gist dest
 
-sudo rm -rf dest/*
-sudo cp -r source/* dest/
+rm -rf dest/*
+cp -r source/* dest/
 
 cd dest
 mvn clean package

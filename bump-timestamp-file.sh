@@ -3,7 +3,7 @@
 set -e # fail fast
 set -x # print commands
 
-git clone git-repo-output updated-gist
+git clone git-repo updated-gist
 
 cd updated-gist
 echo $(date) > bumpme

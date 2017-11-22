@@ -13,4 +13,4 @@ outputs:
   - name: updated-gist
 
 run:
-  path: resource-tutorial/12_publishing_outputs/shell.sh
+  path: resource-tutorial/shell.sh

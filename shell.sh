@@ -21,4 +21,4 @@ git config --global user.name "DeenaDhayalanB"
 
 git add .
 git commit -m "packaged output"
-git push -u DeenaDhayalanB:Deepak123
+git push

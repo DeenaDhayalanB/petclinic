@@ -1,17 +1,15 @@
 #!/bin/sh
 
-#set -e # fail fast
-#set -x # print commands
+set -e # fail fast
+set -x # print commands
 
-#git clone git-repo updated-gist
+git clone git-repo updated-gist
 
-#cd updated-gist
-#echo $(date) > bumpme
+cd updated-gist
+echo $(date) > bumpme
 
-#git config --global user.email "DeenaDhayalanB@cognizant.com"
-#git config --global user.name "Deepak123"
+git config --global user.email "DeenaDhayalanB@cognizant.com"
+git config --global user.name "Deepak123"
 
-#git add .
-#git commit -m "Bumped date"
-
-echo "Hello World"
+git add .
+git commit -m "Bumped date"

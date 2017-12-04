@@ -5,8 +5,6 @@ pipeline {
     stage('Build') {
       steps {
         echo 'Build started!'
-        checkout scm
-        sh 'mvn clean install -DskipTests=True'
       }
     }
     stage('Test') {
@@ -36,7 +34,6 @@ pipeline {
     stage('CodeAnalysis') {
       steps {
         echo '-----Sonar Analysis started----'
-        sh 'mvn sonar:sonar'
       }
     }
     stage('Deploy') {
